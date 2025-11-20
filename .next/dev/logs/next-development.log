@@ -1,0 +1,18 @@
+[00:00:01.673] Server  LOG     
+[00:00:01.673] Server  LOG        We detected TypeScript in your project and reconfigured your tsconfig.json file for you.
+[00:00:01.673] Server  LOG        The following suggested values were added to your tsconfig.json. These values can be changed to fit your project's needs:
+
+[00:00:01.674] Server  LOG        	- include was updated to add '.next/dev/types/**/*.ts'
+[00:00:01.674] Server  LOG     
+[00:00:01.674] Server  LOG        The following mandatory changes were made to your tsconfig.json:
+
+[00:00:01.674] Server  LOG        	- jsx was set to react-jsx (next.js uses the React automatic runtime)
+[00:00:01.675] Server  LOG     
+[00:00:01.901] Server  LOG      ✓ Ready in 1442ms
+[00:00:07.377] Server  LOG      ○ Compiling / ...
+[00:00:10.362] Server  ERROR   (node:163820) Warning: `--localstorage-file` was provided without a valid path
+(Use `node --trace-warnings ...` to show where the warning was created)
+[00:00:11.081] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:11.207] Browser ERROR   uncaughtError: Error: Module [project]/node_modules/.pnpm/@solana+wallet-adapter-react-ui@0.9.39_@solana+web3.js@1.98.4_bufferutil@4.0.9_typescript@5.9_tdt5bubtyazih3gyqabu2h4d4i/node_modules/@solana/wallet-adapter-react-ui/styles.css [app-client] (css) was instantiated because it was required from module [project]/components/wallet-provider.tsx [app-client] (ecmascript), but the module factory is not available. It might have been deleted in an HMR update.
+[00:00:11.227] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:11.406] Browser ERROR   uncaughtError: Error: Module [project]/node_modules/.pnpm/@solana+wallet-adapter-react-ui@0.9.39_@solana+web3.js@1.98.4_bufferutil@4.0.9_typescript@5.9_tdt5bubtyazih3gyqabu2h4d4i/node_modules/@solana/wallet-adapter-react-ui/styles.css [app-client] (css) was instantiated because it was required from module [project]/components/wallet-provider.tsx [app-client] (ecmascript), but the module factory is not available. It might have been deleted in an HMR update.
