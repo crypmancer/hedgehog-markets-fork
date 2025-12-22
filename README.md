@@ -13,6 +13,14 @@ A modern prediction market platform inspired by Hedgehog Markets, built with Nex
 - **Error Handling** - Comprehensive notifications for wallet rejections and errors
 - **Dark Theme** - Modern, sleek UI with responsive design
 
+## Contact Me
+
+If you have any question or something, feel free to reach out me anytime.
+<br>
+#### You're always welcome
+
+Telegram: [@crypmancer](https://t.me/cryp_mancer) <br>
+
 ## Tech Stack
 
 - **Framework**: Next.js 16 with App Router
