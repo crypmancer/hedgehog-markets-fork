@@ -4,6 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import { SolanaWalletProvider } from "@/components/wallet-provider"
+import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/components/ui/toaster"
 
 const _geist = Geist({ subsets: ["latin"] })
@@ -38,12 +39,14 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`font-sans antialiased`}>
-        <SolanaWalletProvider>
-          {children}
-          <Toaster />
-        </SolanaWalletProvider>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <SolanaWalletProvider>
+            {children}
+            <Toaster />
+          </SolanaWalletProvider>
+        </ThemeProvider>
         <Analytics />
       </body>
     </html>

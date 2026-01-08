@@ -26,7 +26,7 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background text-foreground transition-colors duration-200">
       <Header searchQuery={searchQuery} onSearchChange={setSearchQuery} />
       <Hero />
       <main className="container mx-auto px-4 py-8">

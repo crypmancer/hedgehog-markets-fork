@@ -1,18 +1,117 @@
-[00:00:01.673] Server  LOG     
-[00:00:01.673] Server  LOG        We detected TypeScript in your project and reconfigured your tsconfig.json file for you.
-[00:00:01.673] Server  LOG        The following suggested values were added to your tsconfig.json. These values can be changed to fit your project's needs:
+[00:00:14.570] Server  LOG      ✓ Ready in 8.8s
+[00:00:40.818] Server  LOG      ○ Compiling / ...
+[00:00:46.979] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:47.289] Browser ERROR   uncaughtError: Error: Module [project]/node_modules/@solana/wallet-adapter-react-ui/styles.css [app-client] (css) was instantiated because it was required from module [project]/components/wallet-provider.tsx [app-client] (ecmascript), but the module factory is not available. It might have been deleted in an HMR update.
+[00:01:21.257] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:01:21.258] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./components/wallet-provider.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:01:21.258] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:01:21.434] Server  LOG      ✓ Compiled in 97ms
+[00:01:21.915] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:22.424] Browser WARN    Phantom was registered as a Standard Wallet. The Wallet Adapter for Phantom can be removed from your app.
+[00:01:22.424] Browser WARN    Solflare was registered as a Standard Wallet. The Wallet Adapter for Solflare can be removed from your app.
+[00:01:22.424] Browser WARN    StreamMiddleware - Unknown response id "solflare-detect-metamask"
+[00:01:22.424] Browser WARN    Phantom was registered as a Standard Wallet. The Wallet Adapter for Phantom can be removed from your app.
+[00:01:22.424] Browser WARN    Solflare was registered as a Standard Wallet. The Wallet Adapter for Solflare can be removed from your app.
+[00:01:22.424] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
 
-[00:00:01.674] Server  LOG        	- include was updated to add '.next/dev/types/**/*.ts'
-[00:00:01.674] Server  LOG     
-[00:00:01.674] Server  LOG        The following mandatory changes were made to your tsconfig.json:
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
 
-[00:00:01.674] Server  LOG        	- jsx was set to react-jsx (next.js uses the React automatic runtime)
-[00:00:01.675] Server  LOG     
-[00:00:01.901] Server  LOG      ✓ Ready in 1442ms
-[00:00:07.377] Server  LOG      ○ Compiling / ...
-[00:00:10.362] Server  ERROR   (node:163820) Warning: `--localstorage-file` was provided without a valid path
-(Use `node --trace-warnings ...` to show where the warning was created)
-[00:00:11.081] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:11.207] Browser ERROR   uncaughtError: Error: Module [project]/node_modules/.pnpm/@solana+wallet-adapter-react-ui@0.9.39_@solana+web3.js@1.98.4_bufferutil@4.0.9_typescript@5.9_tdt5bubtyazih3gyqabu2h4d4i/node_modules/@solana/wallet-adapter-react-ui/styles.css [app-client] (css) was instantiated because it was required from module [project]/components/wallet-provider.tsx [app-client] (ecmascript), but the module factory is not available. It might have been deleted in an HMR update.
-[00:00:11.227] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:11.406] Browser ERROR   uncaughtError: Error: Module [project]/node_modules/.pnpm/@solana+wallet-adapter-react-ui@0.9.39_@solana+web3.js@1.98.4_bufferutil@4.0.9_typescript@5.9_tdt5bubtyazih3gyqabu2h4d4i/node_modules/@solana/wallet-adapter-react-ui/styles.css [app-client] (css) was instantiated because it was required from module [project]/components/wallet-provider.tsx [app-client] (ecmascript), but the module factory is not available. It might have been deleted in an HMR update.
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <SegmentViewNode type="page" pagePath="page.tsx">
+      <SegmentTrieNode>
+      <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
+        <Home params={Promise} searchParams={Promise}>
+          <div className="min-h-scre...">
+            <Header searchQuery="" onSearchChange={function bound dispatchSetState}>
+              <header className="border-b b...">
+                <div className="container ...">
+                  <div className="flex items...">
+                    <div>
+                    <div>
+                    <div className="wallet-ada...">
+                      <WalletMultiButton>
+                        <BaseWalletMultiButton labels={{...}}>
+                          <div className="wallet-ada...">
+                            <BaseWalletConnectionButton aria-expanded={false} style={{...}} onClick={function onClick} ...>
+                              <Button aria-expanded={false} style={{...}} onClick={function onClick} ...>
+                                <button className="wallet-ada..." disabled={undefined} style={{...}} ...>
++                                 <i className="wallet-adapter-button-start-icon">
+-                                 Select Wallet
+                                  ...
+                            ...
+            ...
+
+[00:01:22.424] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:01:22.424] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:01:22.424] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:01:22.424] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1767903122250}
+[00:01:22.424] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1767903122250}
+[00:01:22.424] Browser ERROR   [v0] Wallet error: {"error":{"code":4001,"message":"User rejected the request."},"name":"WalletConnectionError"}
+[00:01:22.424] Browser ERROR   [v0] Wallet error: {"error":{"code":4001,"message":"User rejected the request."},"name":"WalletConnectionError"}
+[00:01:39.358] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:01:39.358] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:01:41.301] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:41.536] Browser WARN    Phantom was registered as a Standard Wallet. The Wallet Adapter for Phantom can be removed from your app.
+[00:01:41.536] Browser WARN    Solflare was registered as a Standard Wallet. The Wallet Adapter for Solflare can be removed from your app.
+[00:01:41.743] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:01:41.743] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:01:41.743] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1767903141799}
+[00:01:41.743] Browser WARN    StreamMiddleware - Unknown response id "solflare-detect-metamask"
+[00:01:47.200] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. MetaMask
+[00:01:47.200] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. MetaMask
+[00:01:51.928] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. MetaMask
+[00:02:43.285] Server  LOG      ✓ Compiled in 121ms
+[00:02:58.836] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. MetaMask
+[00:02:58.837] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. MetaMask
+[00:04:03.720] Server  LOG      ✓ Compiled in 61ms
+[00:04:03.814] Browser ERROR   uncaughtError: ReferenceError: wallets is not defined
+[00:04:06.906] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:04:06.913] Server  LOG      ✓ Compiled in 73ms
+[00:04:07.078] Browser WARN    Phantom was registered as a Standard Wallet. The Wallet Adapter for Phantom can be removed from your app.
+[00:04:07.078] Browser WARN    Solflare was registered as a Standard Wallet. The Wallet Adapter for Solflare can be removed from your app.
+[00:04:07.078] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1767903287125}
+[00:04:07.579] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:04:07.838] Browser WARN    Phantom was registered as a Standard Wallet. The Wallet Adapter for Phantom can be removed from your app.
+[00:04:07.838] Browser WARN    Solflare was registered as a Standard Wallet. The Wallet Adapter for Solflare can be removed from your app.
+[00:04:07.928] Browser WARN    StreamMiddleware - Unknown response id "solflare-detect-metamask"
+[00:04:08.028] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:04:08.028] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:04:08.028] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1767903288126}
+[00:04:21.675] Server  LOG      ✓ Compiled in 73ms
+[00:04:22.459] Server  LOG      ✓ Compiled in 72ms
+[00:04:40.417] Browser ERROR   [v0] Wallet error: {"error":{"code":4001,"message":"User rejected the request."},"name":"WalletConnectionError"}
+[00:05:33.608] Server  LOG      ✓ Compiled in 300ms
+[00:05:34.043] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:05:34.438] Browser WARN    Phantom was registered as a Standard Wallet. The Wallet Adapter for Phantom can be removed from your app.
+[00:05:34.438] Browser WARN    Solflare was registered as a Standard Wallet. The Wallet Adapter for Solflare can be removed from your app.
+[00:05:34.438] Browser WARN    StreamMiddleware - Unknown response id "solflare-detect-metamask"
+[00:05:34.438] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:05:34.438] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:05:34.438] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1767903374536}
+[00:05:42.913] Server  LOG      ✓ Compiled in 59ms
+[00:05:44.058] Server  LOG      ✓ Compiled in 109ms
+[00:06:29.466] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:06:29.611] Browser WARN    Phantom was registered as a Standard Wallet. The Wallet Adapter for Phantom can be removed from your app.
+[00:06:29.611] Browser WARN    Solflare was registered as a Standard Wallet. The Wallet Adapter for Solflare can be removed from your app.
+[00:06:29.611] Browser WARN    StreamMiddleware - Unknown response id "solflare-detect-metamask"
+[00:06:29.611] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:06:29.611] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:06:29.611] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1767903429711}
+[00:07:17.716] Server  LOG      ✓ Compiled in 78ms
+[00:08:49.473] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:08:49.473] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:08:58.939] Server  LOG      ✓ Compiled in 249ms
+[00:09:07.184] Server  LOG      ✓ Compiled in 62ms
+[00:09:10.267] Server  LOG      ✓ Compiled in 98ms
+[00:09:12.005] Server  LOG      ✓ Compiled in 208ms
+[00:09:12.890] Server  LOG      ✓ Compiled in 60ms
+[00:09:20.069] Server  LOG      ✓ Compiled in 126ms
+[00:09:24.275] Server  LOG      ✓ Compiled in 131ms

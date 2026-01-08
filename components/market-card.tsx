@@ -13,7 +13,7 @@ interface MarketCardProps {
 export function MarketCard({ market, onTrade }: MarketCardProps) {
   return (
     <Card
-      className="p-4 hover:border-primary/50 transition-colors cursor-pointer bg-card"
+      className="p-4 hover:border-primary/50 hover:shadow-lg transition-all duration-200 cursor-pointer bg-card border-border"
       onClick={() => onTrade(market)}
     >
       <div className="flex items-start justify-between gap-2 mb-3">

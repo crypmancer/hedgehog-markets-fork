@@ -7,12 +7,19 @@ import { PhantomWalletAdapter, SolflareWalletAdapter } from "@solana/wallet-adap
 import { clusterApiUrl } from "@solana/web3.js"
 import type { WalletError } from "@solana/wallet-adapter-base"
 import { useToast } from "@/hooks/use-toast"
+import "@solana/wallet-adapter-react-ui/styles.css"
 
-require("@solana/wallet-adapter-react-ui/styles.css")
+// Create wallet adapters outside component to ensure single instance
+// This prevents duplicate keys from React Strict Mode double-renders
+const walletAdapters = [new PhantomWalletAdapter(), new SolflareWalletAdapter()]
+
+// Deduplicate wallets by name to prevent duplicate keys
+const uniqueWallets = walletAdapters.filter(
+  (wallet, index, self) => index === self.findIndex((w) => w.name === wallet.name)
+)
 
 export const SolanaWalletProvider: FC<{ children: ReactNode }> = ({ children }) => {
   const endpoint = useMemo(() => clusterApiUrl("devnet"), [])
-  const wallets = useMemo(() => [new PhantomWalletAdapter(), new SolflareWalletAdapter()], [])
   const { toast } = useToast()
 
   const onError = useCallback(
@@ -40,7 +47,7 @@ export const SolanaWalletProvider: FC<{ children: ReactNode }> = ({ children }) 
 
   return (
     <ConnectionProvider endpoint={endpoint}>
-      <WalletProvider wallets={wallets} autoConnect onError={onError}>
+      <WalletProvider wallets={uniqueWallets} autoConnect onError={onError}>
         <WalletModalProvider>{children}</WalletModalProvider>
       </WalletProvider>
     </ConnectionProvider>

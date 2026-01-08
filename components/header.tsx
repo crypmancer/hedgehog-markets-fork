@@ -6,6 +6,7 @@ import { useWallet } from "@solana/wallet-adapter-react"
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui"
 import { useToast } from "@/hooks/use-toast"
 import { useEffect, useRef } from "react"
+import { ThemeToggle } from "@/components/theme-toggle"
 
 interface HeaderProps {
   searchQuery: string
@@ -33,7 +34,7 @@ export function Header({ searchQuery, onSearchChange }: HeaderProps) {
   }, [connected, publicKey, toast])
 
   return (
-    <header className="border-b border-border bg-card">
+    <header className="border-b border-border bg-card shadow-sm transition-colors duration-200">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between gap-4">
           <div className="flex items-center gap-2">
@@ -60,8 +61,11 @@ export function Header({ searchQuery, onSearchChange }: HeaderProps) {
             </div>
           </div>
 
-          <div className="wallet-adapter-button-wrapper">
-            <WalletMultiButton />
+          <div className="flex items-center gap-2">
+            <ThemeToggle />
+            <div className="wallet-adapter-button-wrapper">
+              <WalletMultiButton />
+            </div>
           </div>
         </div>
 
